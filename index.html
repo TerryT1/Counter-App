@@ -1,39 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <style>
-    #count {
-      font-size: 100px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Counter App</h1>
-  <div>
-    <div id="count">0</div>
-    <button onclick="increment()">Increment</button>
-    <button onclick="decrement()">Decrement</button>
-    <button onclick= "reset()">Reset</button>
+  <div class="container">
+    <h1>Students entered: </h1>
+    <h2 id="count-el">0</h2>
+    <div>
+      <button id="increment-btn" onclick="increment()">Increment</button>
+      <button id="decrement-btn" onclick="decrement()">Decrement</button>
+      <button id="reset-btn" onclick="reset()">Reset</button>
+      <button id="save-btn" onclick="save()">Save</button>
+    </div>
+    <h3>Previous Entries:</h3>
+    <p id="entries-el"></p> 
   </div>
 
-  <script>
-    let count = 0;
-    function increment() {
-      count++;
-      document.getElementById("count").textContent = count;
-    }
-
-    function decrement() {
-        if (count > 0) {
-            count--;
-        }
-      document.getElementById("count").textContent = count;
-    }
-
-    function reset() {
-        count = 0;
-        document.getElementById("count").textContent = count;
-    }
-  </script>
+  <script src="index.js"></script>
 </body>
 </html>
